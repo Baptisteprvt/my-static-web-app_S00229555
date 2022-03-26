@@ -1,16 +1,29 @@
-# Change Log
+CHANGELOG
+=========
+V 4.0.0
+------
+ - Updated to angular version 10
+ - Other bug fixes
+ - 
+V 3.0.0
+------
+ - Updated to angular version 8
+ - Other bug fixes
 
-## [1.2.0] 2021-01-05
-### Updates
-- update to Angular 11
-- update all dependencies to match Angular 11 version
+V 2.2.1
+------
+ - Updated to angular version 6.1.4
+ - Updated to bootstrap version 4.1.3
+ - Improved design
+ - Other bug fixes
 
-## [1.1.0] 2020-03-11
-### Updates
-- update to Angular 9
-- update all dependencies to match Angular 9 version
+V 2.0.0
+------
+ - Updated to angular version 5.2.0
+ - Updated to bootstrap version 4.1
+ - Improved design
+ - Other bug fixes
 
-## [1.0.0] 2019-09-26
-### Original Release
-- Added Angular as base framework
-- Added design from BLK Design System by Creative Tim
+V 1.0.0
+-------
+ - Initial release

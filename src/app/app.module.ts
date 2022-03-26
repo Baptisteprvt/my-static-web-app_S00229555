@@ -1,55 +1,44 @@
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { RouterModule } from "@angular/router";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { HttpClientModule } from "@angular/common/http";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-import { ProgressbarModule } from "ngx-bootstrap/progressbar";
-import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { CollapseModule } from "ngx-bootstrap/collapse";
-import { TabsModule } from "ngx-bootstrap/tabs";
-import { PaginationModule } from "ngx-bootstrap/pagination";
-import { AlertModule } from "ngx-bootstrap/alert";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
-import { CarouselModule } from "ngx-bootstrap/carousel";
-import { ModalModule } from "ngx-bootstrap/modal";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule, ThemeService } from 'ng2-charts';
 
-import { PagesModule } from "./pages/pages.module";
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodoComponent } from './apps/todo-list/todo/todo.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { ContentAnimateDirective } from './shared/directives/content-animate.directive';
+import { TodoListComponent } from './apps/todo-list/todo-list.component';
 
-import { IndexComponent } from "./pages/index/index.component";
-import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
-import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
 @NgModule({
   declarations: [
-    AppComponent
-    // IndexComponent,
-    // ProfilepageComponent,
-    // RegisterpageComponent,
-    // LandingpageComponent
+    AppComponent,
+    NavbarComponent,
+    SidebarComponent,
+    FooterComponent,
+    DashboardComponent,
+    TodoListComponent,
+    TodoComponent,
+    SpinnerComponent,
+    ContentAnimateDirective
   ],
   imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule,
-    RouterModule,
-    AppRoutingModule,
-    // BsDropdownModule.forRoot(),
-    // ProgressbarModule.forRoot(),
-    // TooltipModule.forRoot(),
-    // CollapseModule.forRoot(),
-    // TabsModule.forRoot(),
-    PagesModule
-    // PaginationModule.forRoot(),
-    // AlertModule.forRoot(),
-    // BsDatepickerModule.forRoot(),
-    // CarouselModule.forRoot(),
-    // ModalModule.forRoot()
+    ReactiveFormsModule,
+    ChartsModule
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
